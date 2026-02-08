@@ -3,25 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../../../src/style.css" />
+    <title>artosvita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/main.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header__container conteiner">
-        <a class="logo" href="/index.html">
-          <svg class="logo-svg" width="60" height="60">
-            <use href="../../../public/svg/logo.svg"></use>
-          </svg>
-          <p class="logo-title">ART <br />OSVITA</p>
-        </a>
-        <div class="nav">
-          <a class="nav-about" href="../about.html">ПРО НАС</a
-          ><a class="nav-blog" href="./blog.html">БЛОГ</a>
-        </div>
-        <button type="button">ЗАПИСАТИСЯ</button>
-      </div>
-    </header>
+<header id="header" data-button="true" data-courses="true" class="header"></header>
     <main>
       <section class="kurs-risunka_hero section">
         <div>
@@ -175,7 +167,7 @@
           <li>
             <div class="reviews__head">
               <img
-                src="./images/reviews/user.png"
+                src="../../../images/reviews/user.png"
                 alt="випускник"
                 width="96"
                 height="96"
@@ -196,7 +188,7 @@
           <li>
             <div class="reviews__head">
               <img
-                src="./images/reviews/shushman.png"
+                src="../../../images/reviews/shushman.png"
                 alt="випускник"
                 width="96"
                 height="96"
@@ -267,5 +259,6 @@
           height="74"
       /></a>
     </div>
+    <script type="module" src="../../main.js"></script>
   </body>
 </html>

@@ -1,0 +1,229 @@
+.logo {
+  fill: $accent-text-color;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  display: flex;
+  background: $background-color-link-borer;
+  padding: 4px;
+  border-radius: 27px;
+  & .logo-div {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    gap: 4px;
+    background-color: $background-color-link;
+    border-radius: 25px;
+    padding: 8px 27px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+.logo-svg {
+  @media screen and (min-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.nav {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: $color-gray-text;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    .nav-links {
+      margin: auto;
+    }
+  }
+  & .nav-about,
+  & .nav-blog {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+  & .nav-about:hover,
+  & .nav-blog:hover {
+    color: $color-gray-hover;
+  }
+}
+.nav-links {
+  display: flex;
+  // gap: 40px;
+  border-radius: 25px;
+  padding: 12px 60px;
+  border: 4px solid transparent;
+  background-image:
+    linear-gradient(#003580, #003580),
+    // внутренняя заливка
+    linear-gradient(180deg, #0046a8, #001636); // градиент для "бордера"
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  & .nav-about {
+    padding-right: 24px;
+  }
+  & .nav-blog {
+    padding-left: 24px;
+    border-left: 1px solid rgba(129, 135, 140, 0.66);
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+.header__container {
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.mob-menu {
+  // background-color: linear-gradient(180deg, #0046a8, #001636);
+  background: $background-color-link-borer;
+  border: none;
+  padding: 4px;
+  // margin-left: auto;
+  cursor: pointer;
+  display: flex;
+  width: 56px;
+  height: 56px;
+  border-radius: 20%;
+  &:active {
+    background: linear-gradient(180deg, #003580, #001636);
+    transform: scale(0.95);
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mob-menu__border {
+  width: 100%;
+  background-color: rgb(0, 53, 128);
+  display: flex;
+  border-radius: 20%;
+}
+.mob-menu__icon {
+  color: $color-gray-text;
+  display: block;
+  margin: auto;
+}
+
+/* Закрепление шапки сверху при скролле */
+.header {
+  position: sticky;
+  top: 0;
+  padding-top: 5px;
+  z-index: 1000;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    padding-top: 16px;
+  }
+  // background: $background-color-link-borer;
+  // -webkit-backdrop-filter: blur(6px);
+  // backdrop-filter: blur(6px);
+}
+.nav-courses {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  border-radius: 25px;
+  padding: 14px 32px;
+  border: 4px solid transparent;
+  background-image:
+    linear-gradient(#003580, #003580),
+    // внутренняя заливка
+    linear-gradient(180deg, #0046a8, #001636); // градиент для "бордера"
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  @media screen and (min-width: 768px) {
+    background-image:
+      linear-gradient(rgb(205, 210, 216), rgb(205, 210, 216)),
+      // внутренняя заливка
+      linear-gradient(180deg, #0046a8, #001636); // градиент для "бордера"
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    color: rgb(0, 14, 33);
+    &:hover {
+      background-image:
+        linear-gradient(#003580, #003580),
+        // внутренняя заливка
+        linear-gradient(180deg, #0046a8, #001636); // градиент для "бордера"
+      background-clip: padding-box, border-box;
+      background-origin: padding-box, border-box;
+      color: white;
+    }
+  }
+}
+.body-blog-main {
+  .nav {
+    justify-content: center;
+    gap: 0;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    padding-right: 0;
+  }
+
+  .nav-courses {
+    // border-left: 1px solid rgba(129, 135, 140, 0.66);
+    border-left: none;
+    border-radius: 0 999px 999px 0;
+    padding: 12px 24px;
+    padding-right: 60px;
+
+    background-image: linear-gradient(#003580, #003580), linear-gradient(180deg, #0046a8, #001636);
+
+    // ВАЖНО — убираем отдельную кнопку визуально
+    margin-left: 0;
+  }
+
+  // Визуально объединяем
+  .nav-links {
+    display: flex;
+    align-items: stretch;
+    border-radius: 999px 0 0 999px;
+    border-right: none;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .nav-blog {
+    padding-right: 24px;
+    border-right: 1px solid rgba(129, 135, 140, 0.66);
+  }
+  .nav-links a,
+  .nav-courses {
+    display: flex;
+    align-items: center;
+  }
+  .nav-courses {
+    color: $color-gray-text;
+  }
+  .nav-courses:hover {
+    color: $color-gray-hover;
+  }
+}
+.sign-up {
+  font-family: Geologica, Arial, sans-serif;
+  border-radius: 999px;
+  background-color: rgb(255, 191, 0);
+  padding: 12px 24px;
+  color: rgb(0, 36, 87);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+  @media (max-width: 767px) {
+    display: none;
+  }
+}

@@ -6,68 +6,57 @@
     <title>artosvita</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="../../src/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/main.css" />
   </head>
 
   <body>
-    <header class="header">
-      <div class="header__container conteiner">
-        <a class="logo" href="/index.html">
-          <svg class="logo-svg" width="60" height="60">
-            <use href="./public/svg/logo.svg"></use>
-          </svg>
-          <p class="logo-title">ART <br />OSVITA</p>
-        </a>
-        <div class="nav">
-          <a class="nav-about" href="./about.html">ПРО НАС</a
-          ><a class="nav-blog" href="./blog/blog.html">БЛОГ</a>
-          <a class="courses" href="./courses/courses.html">КУРСИ</a>
-        </div>
-      </div>
-    </header>
+    <header id="header" class="header"></header>
     <main>
       <section class="section about">
-        <div class="section__container conteiner">
-          <div>
+        <div class="section__container container">
+          <div class="about-text">
             <h1 class="visually-hidden">Про нас</h1>
-            <p class="about-text">
-              “Натхненні плекати джерело та живити рідну землю”.
-            </p>
-            <h2>МІСІЯ</h2>
-            <p>
-              Подолання кризи в культурно-освітньому секторі країни та
-              реалізація культурного потенціалу України в міжнародному просторі.
-            </p>
-            <p>
-              Ми оновлюємо формальну систему мистецької освіти, перетворюючи її
-              на сучасну й ефективну модель навчання. Art Osvita виховує
-              дизайнерів і митців, які одночасно формують культурний вплив
-              України у світі та відповідають на реальні запити ринку.
-            </p>
-            <div>
-              <img src="../../images/about/mentor_@1x.jpg" alt="іконка" />
-              <p>Ініціатива випускників</p>
-              <p>Львівівської національної академії мистецтв</p>
+            <p class="about-p">“Натхненні плекати джерело та живити рідну землю”.</p>
+            <div class="">
+              <h2>МІСІЯ</h2>
+              <p class="about-p2">
+                Подолання кризи в культурно-освітньому секторі країни та реалізація культурного потенціалу України в
+                міжнародному просторі.
+              </p>
+              <p class="about-p3">
+                Ми оновлюємо формальну систему мистецької освіти, перетворюючи її на сучасну й ефективну модель
+                навчання. Art Osvita виховує дизайнерів і митців, які одночасно формують культурний вплив України у
+                світі та відповідають на реальні запити ринку.
+              </p>
             </div>
+            <div class="about-bot">
+              <svg class="icon-about" width="48" height="48">
+                <use href="/public/sprite.svg#icon-about"></use>
+              </svg>
+              <div>
+                <p class="about-p4">Ініціатива випускників</p>
+                <p class="about-p5">Львівівської національної академії мистецтв</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-image-cont">
+            <img class="about-image" src="../../images/about/cat.png" alt="іконка" width="550" height="550" />
           </div>
         </div>
       </section>
       <div class="telegram-bots">
         <a href="https://t.me/maryartosvita" target="_blank"
-          ><img
-            src="../../images/bcg/Ellipse 315.png"
-            alt="бот"
-            width="74"
-            height="74"
+          ><img src="../../images/bcg/Ellipse 315.png" alt="бот" width="74" height="74"
         /></a>
         <a href="https://t.me/vstup_artosvita" target="_blank"
-          ><img
-            src="../../images/bcg/Frame 139.png"
-            alt="бот"
-            width="74"
-            height="74"
+          ><img src="../../images/bcg/Frame 139.png" alt="бот" width="74" height="74"
         /></a>
       </div>
     </main>
+    <script type="module" src="../main.js"></script>
   </body>
 </html>

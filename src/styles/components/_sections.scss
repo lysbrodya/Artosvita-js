@@ -1,0 +1,32 @@
+.section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  &.hero {
+    background-image:
+      linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./../../images/bcg/bcg_hero.png");
+  }
+
+  &.advantages {
+    background-image: url("./../../images/bcg/bcg_advantages.png");
+  }
+}
+
+.header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition: background-image 0.3s ease;
+
+  &.header--scrolled {
+    background-image: none;
+  }
+}
+.header-main {
+  background-image:
+    linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./../../images/bcg/bcg_hero.png");
+}
