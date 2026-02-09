@@ -46,7 +46,11 @@ window.addEventListener("scroll", () => {
   }
 });
 
-import reviews from "./styles/reviews.json";
+// import reviews from "./styles/reviews.json";
+async function loadReviews() {
+  const res = await fetch("/Artosvita-js/src/styles/reviews.json");
+  return res.json();
+}
 function renderReviews(list) {
   return list
     .map(
@@ -70,7 +74,7 @@ function renderReviews(list) {
         </div>
         <a class="review-card__insta" href="${item.instagram}" target="_blank">
           <svg class="icon-insta" width="40" height="40">
-            <use href="/sprite.svg#instagram"></use>
+            <use href="/Artosvita-js/sprite.svg#instagram"></use>
           </svg>
         </a>
       </div>
@@ -80,7 +84,7 @@ function renderReviews(list) {
     .join("");
 }
 
-function initSlider() {
+async function initSlider() {
   const track = document.querySelector(".slider-track");
   const next = document.getElementById("next");
   const prev = document.getElementById("prev");
@@ -89,6 +93,7 @@ function initSlider() {
   if (!track || !next || !prev) return;
 
   // Рендер карточек
+  const reviews = await loadReviews();
   track.innerHTML = renderReviews(reviews);
 
   const cards = track.children;
