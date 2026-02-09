@@ -1,3 +1,5 @@
+// const BASE_PATH = location.hostname.includes("github.io") ? "/Artosvita-js" : "";
+
 const header = document.getElementById("header");
 if (header) {
   const withButton = header.dataset.button === "true";
@@ -48,7 +50,7 @@ window.addEventListener("scroll", () => {
 
 // import reviews from "./styles/reviews.json";
 async function loadReviews() {
-  const res = await fetch("/Artosvita-js/src/styles/reviews.json");
+  const res = await fetch("/src/styles/reviews.json");
   return res.json();
 }
 function renderReviews(list) {

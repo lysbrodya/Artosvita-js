@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "sass:build": "sass src/styles/main.scss dist/main.css",
     "sass:min": "sass src/styles/main.scss dist/main.min.css --style=compressed",
-    "sass:all": "npm run sass:build && npm run sass:min"
+    "sass:all": "npm run sass:build && npm run sass:min",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "prettier": "^3.8.1",
