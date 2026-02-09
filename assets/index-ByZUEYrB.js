@@ -46,9 +46,9 @@
         </div>
         <a class="review-card__insta" href="${t.instagram}" target="_blank">
           <svg class="icon-insta" width="40" height="40">
-            <use href="/Artosvita-js/sprite.svg#instagram"></use>
+            <use href="/sprite.svg#instagram"></use>
           </svg>
         </a>
       </div>
     </li>
-  `).join("")}async function y(){const e=document.querySelector(".slider-track"),t=document.getElementById("next"),o=document.getElementById("prev");if(!e||!t||!o)return;const l=await w();e.innerHTML=_(l);const s=e.children;if(!s.length)return;const r=s[0].cloneNode(!0),i=s[s.length-1].cloneNode(!0);e.appendChild(r),e.insertBefore(i,e.firstChild);let c=1;function a(n=!0){const f=e.children[0],g=getComputedStyle(e),p=parseInt(g.gap)||0,m=f.offsetWidth+p;e.style.transition=n?"transform 0.4s ease":"none",e.style.transform=`translateX(-${c*m}px)`}a(!1),t.onclick=()=>{c++,a()},o.onclick=()=>{c--,a()};let u=0,h=0;e.addEventListener("touchstart",n=>{u=n.touches[0].clientX}),e.addEventListener("touchend",n=>{h=n.changedTouches[0].clientX,v()});function v(){const n=u-h;Math.abs(n)<50||(n>0?t.click():o.click())}e.addEventListener("transitionend",()=>{c===e.children.length-1&&(c=1,a(!1)),c===0&&(c=e.children.length-2,a(!1))})}y();
+  `).join("")}async function y(){const e=document.querySelector(".slider-track"),t=document.getElementById("next"),o=document.getElementById("prev");if(!e||!t||!o)return;const l=await w();e.innerHTML=_(l);const s=e.children;if(!s.length)return;const r=s[0].cloneNode(!0),i=s[s.length-1].cloneNode(!0);e.appendChild(r),e.insertBefore(i,e.firstChild);let c=1;function a(n=!0){const v=e.children[0],g=getComputedStyle(e),p=parseInt(g.gap)||0,m=v.offsetWidth+p;e.style.transition=n?"transform 0.4s ease":"none",e.style.transform=`translateX(-${c*m}px)`}a(!1),t.onclick=()=>{c++,a()},o.onclick=()=>{c--,a()};let u=0,h=0;e.addEventListener("touchstart",n=>{u=n.touches[0].clientX}),e.addEventListener("touchend",n=>{h=n.changedTouches[0].clientX,f()});function f(){const n=u-h;Math.abs(n)<50||(n>0?t.click():o.click())}e.addEventListener("transitionend",()=>{c===e.children.length-1&&(c=1,a(!1)),c===0&&(c=e.children.length-2,a(!1))})}y();
