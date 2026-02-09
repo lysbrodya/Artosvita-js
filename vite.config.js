@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/Artosvita-js/",
+  base: process.env.NODE_ENV === "production" ? "/Artosvita-js/" : "/",
 });

@@ -76,7 +76,7 @@ function renderReviews(list) {
         </div>
         <a class="review-card__insta" href="${item.instagram}" target="_blank">
           <svg class="icon-insta" width="40" height="40">
-            <use href="/Artosvita-js/sprite.svg#instagram"></use>
+            <use href="/sprite.svg#instagram"></use>
           </svg>
         </a>
       </div>
