@@ -50,7 +50,7 @@ window.addEventListener("scroll", () => {
 
 // import reviews from "./styles/reviews.json";
 async function loadReviews() {
-  const res = await fetch("/src/styles/reviews.json");
+  const res = await fetch("/reviews.json");
   return res.json();
 }
 function renderReviews(list) {
