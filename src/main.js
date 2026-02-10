@@ -1,4 +1,11 @@
-// const BASE_PATH = location.hostname.includes("github.io") ? "/Artosvita-js" : "";
+import bcgHero from "../public/images/bcg/bcg_hero.png";
+import bcgAdvantages from "../public/images/bcg/bcg_advantages.png";
+
+// Устанавливаем CSS переменные для картинок
+document.documentElement.style.setProperty("--bcg-hero", `url('${bcgHero}')`);
+document.documentElement.style.setProperty("--bcg-advantages", `url('${bcgAdvantages}')`);
+
+const BASE_PATH = location.hostname.includes("github.io") ? "/Artosvita-js" : "";
 
 const header = document.getElementById("header");
 if (header) {
@@ -6,10 +13,10 @@ if (header) {
   const withOutCouses = header.dataset.courses === "true";
   header.innerHTML = `
         <div class="header__container container">
-        <a class="logo" href="/index.html">
+        <a class="logo" href="${BASE_PATH}/index.html">
         <div class="logo-div">          
           <svg class="logo-svg" width="32" height="32">
-            <use href="/sprite.svg#icon-logo"></use>
+            <use href="${BASE_PATH}/sprite.svg#icon-logo"></use>
           </svg>
           <p class="logo-title">ART <br />OSVITA</p>
           </div>
@@ -17,16 +24,16 @@ if (header) {
         </a>
         <nav class="nav">
           <div class="nav-links">
-            <a class="nav-about" href="/src/pages/about.html">ПРО НАС</a>
-            <a class="nav-blog" href="/src/pages/blog/blog.html">БЛОГ</a>
+            <a class="nav-about" href="${BASE_PATH}/src/pages/about.html">ПРО НАС</a>
+            <a class="nav-blog" href="${BASE_PATH}/src/pages/blog/blog.html">БЛОГ</a>
           </div>
-          ${withOutCouses ? `` : `<a class="nav-courses" href="/src/pages/courses/courses.html">КУРСИ</a>`}
+          ${withOutCouses ? `` : `<a class="nav-courses" href="${BASE_PATH}/src/pages/courses/courses.html">КУРСИ</a>`}
         </nav>
         ${withButton ? `<button class="sign-up">ЗАПИСАТИСЯ</button>` : ``}
               <button class="mob-menu" type="button">
 <div type="button" class="mob-menu__border">
         <svg class="mob-menu__icon" width="40" height="32">
-          <use href="/sprite.svg#icon-menu"></use>
+          <use href="${BASE_PATH}/sprite.svg#icon-menu"></use>
         </svg>
         </div>
       </button>
@@ -50,7 +57,7 @@ window.addEventListener("scroll", () => {
 
 // import reviews from "./styles/reviews.json";
 async function loadReviews() {
-  const res = await fetch("/reviews.json");
+  const res = await fetch(`${BASE_PATH}/reviews.json`);
   return res.json();
 }
 function renderReviews(list) {
@@ -76,7 +83,7 @@ function renderReviews(list) {
         </div>
         <a class="review-card__insta" href="${item.instagram}" target="_blank">
           <svg class="icon-insta" width="40" height="40">
-            <use href="/sprite.svg#instagram"></use>
+            <use href="${BASE_PATH}/sprite.svg#instagram"></use>
           </svg>
         </a>
       </div>
@@ -173,6 +180,7 @@ async function initSlider() {
 }
 
 initSlider();
+
 // function SeriesSum(n) {
 //   // Happy Coding ^_^
 //   let sum = 0;
