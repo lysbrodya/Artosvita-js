@@ -67,6 +67,10 @@
   background-origin: padding-box, border-box;
   overflow: hidden;
   margin-bottom: 14px;
+
+  &:hover > img {
+    scale: 1.1;
+  }
   @media (min-width: 768px) {
     margin-bottom: 0;
   }
@@ -75,6 +79,7 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: scale $cubic;
   }
   @media (min-width: 768px) {
     max-width: 50%;
@@ -103,14 +108,22 @@
   line-height: 1;
   color: rgb(235, 238, 242);
   margin-bottom: 15px;
+  transition: color 400ms ease;
+  &:hover {
+    color: #92b2de;
+  }
   @media (min-width: 768px) {
     font-size: 32px;
     margin-bottom: 15px;
   }
 }
 .blog-title-link-main {
+  transition: color 400ms ease;
+  &:hover {
+    color: #92b2de;
+  }
   @media (min-width: 768px) {
-    font-size: 32px;
+    font-size: 40px;
     margin-bottom: auto;
   }
 }

@@ -103,7 +103,9 @@ async function initSlider() {
 
   // Рендер карточек
   const reviews = await loadReviews();
-  track.innerHTML = renderReviews(reviews);
+  const course = document.querySelector("h1")?.textContent.trim();
+  const filteredReviews = course ? reviews.filter((r) => r.course === course) : reviews;
+  track.innerHTML = renderReviews(filteredReviews);
 
   const cards = track.children;
   if (!cards.length) return;
@@ -180,7 +182,12 @@ async function initSlider() {
 }
 
 initSlider();
-
+// curriculum-moduls
+document.querySelectorAll(".module-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.closest(".curriculum-moduls-item").classList.toggle("open");
+  });
+});
 // function SeriesSum(n) {
 //   // Happy Coding ^_^
 //   let sum = 0;
@@ -208,3 +215,28 @@ initSlider();
 //   return d * 40 - (d >= 7 ? 50 : d >= 3 ? 20 : 0);
 // }
 // console.log(rentalCarCost(7));
+// function repeatStr(n, s) {
+//   let sum = "";
+//   for (let i = 0; i < n; i++) {
+//     sum += s;
+//   }
+//   return sum;
+// }
+// // console.log(repeatStr(0, "hello"));
+// function sumTwoSmallestNumbers(numbers) {
+//   // Code here
+//   let [a, b] = numbers.sort((a, b) => a - b);
+//   console.log(numbers);
+//   console.log(a, b);
+//   return numbers[0] + numbers[1];
+// }
+// console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43]));
+// function sumMix(x) {
+//   let sum = 0;
+//   x.forEach((element) => {
+//     sum += Number(element);
+//   });
+//   return sum;
+// }
+
+// console.log(sumMix([9, 3, "7", "3"]));

@@ -1,0 +1,210 @@
+.curriculum {
+  h2 {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $color-gray-text;
+    margin-bottom: 10px;
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+      padding-left: 180px;
+      padding-right: 180px;
+    }
+  }
+  h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 0.9;
+    @media screen and (min-width: 768px) {
+      font-size: 72px;
+    }
+  }
+}
+.curriculum__container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.number-of-classes {
+  border: 5px solid rgb(0, 70, 168);
+  background-color: rgb(0, 53, 128);
+  border-radius: 24px;
+  padding: 24px 12px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 32px;
+  }
+  p {
+    font-size: 24px;
+    text-transform: uppercase;
+    @media screen and (min-width: 768px) {
+      font-size: 40px;
+    }
+  }
+  & p:first-child {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+    @media screen and (min-width: 768px) {
+      font-size: 64px;
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  li {
+    font-size: 16px;
+    line-height: 1.2;
+    border-radius: 16px;
+    display: flex;
+    overflow: hidden;
+    @media screen and (min-width: 768px) {
+      min-width: 450px;
+    }
+    .number-classes {
+      background-color: rgb(0, 93, 224);
+      flex: 2;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 2;
+      color: $color-gray-text;
+      justify-content: center;
+      text-align: center;
+      @media screen and (min-width: 768px) {
+        font-size: 40px;
+        line-height: 1.5;
+      }
+    }
+    .name-classes {
+      display: flex;
+      background-color: $courses-bcg-color;
+      flex: 5;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.2;
+      color: rgb(83, 85, 87);
+      align-items: center;
+      padding-left: 16px;
+      @media screen and (min-width: 768px) {
+        font-size: 24px;
+        line-height: 1;
+      }
+    }
+  }
+}
+.curriculum-moduls {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.curriculum-moduls-item {
+  background-color: $bcg-curriculum-btn;
+  width: 100%;
+  padding: 16px 32px;
+  border-radius: 24px;
+}
+.module-btn {
+  background-color: transparent;
+  display: block;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+.button-visible {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+}
+.icon-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 2.5px;
+  background: $bcg-curriculum-btn;
+  transform: translate(-50%, -50%);
+}
+
+.icon-line--h {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.icon-line--v {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.curriculum-moduls-item.open {
+  & .dropdown-content {
+    max-height: 500px;
+    padding: 16px 24px;
+    margin-top: 10px;
+  }
+  .icon-line--v {
+    animation: plusToVertical_V 0.5s ease forwards;
+  }
+
+  .icon-line--h {
+    animation: plusToVertical_H 0.5s ease forwards;
+  }
+}
+.curriculum-moduls-item:not(.open) {
+  .icon-line--v {
+    animation: verticalToPlus_V 0.5s ease forwards;
+  }
+
+  .icon-line--h {
+    animation: verticalToPlus_H 0.5s ease forwards;
+  }
+}
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    margin-top 0.4s ease,
+    max-height 0.4s ease,
+    padding 0.5s ease;
+  background-color: rgb(205, 210, 216);
+  border-radius: 12px;
+  font-size: 16px;
+  box-sizing: border-box;
+  color: rgb(51, 51, 51);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  strong {
+    font-weight: 700;
+  }
+}
+.button-text {
+  font-size: 27px;
+  font-weight: 500;
+  color: rgb(20, 20, 20);
+  display: flex;
+  & p:first-child {
+    display: flex;
+    color: rgb(83, 85, 87);
+    font-size: 21px;
+    font-weight: 600;
+    align-items: center;
+    padding-right: 10px;
+    border-right: 1px solid rgba(129, 135, 140, 0.66);
+  }
+  & p:last-child {
+    font-family: $main-font;
+    padding-left: 10px;
+    line-height: 1;
+  }
+}
