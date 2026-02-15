@@ -6,7 +6,7 @@ import { initScrollHeader } from "../js/features/scrollHeader.js";
 import { modal } from "./components/modal.js";
 
 initHeader();
-modal();
+
 initSlider();
 initCurriculum();
 initScrollHeader();
@@ -16,7 +16,9 @@ initScrollHeader();
 document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
 });
-
+document.addEventListener("DOMContentLoaded", () => {
+  modal();
+});
 // function comp(array1, array2) {
 //   //your code here
 //   if (!array1 || !array2) return false;
