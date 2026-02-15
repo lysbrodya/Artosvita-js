@@ -18,7 +18,7 @@
       <section class="kurs-risunka_hero section">
         <div class="container courses-hero">
           <div class="courses-hero__title">
-            <h1>Курс Академічного рисунку</h1>
+            <h1 class="course-name">Курс Академічного рисунку</h1>
             <p class="title-blue">Бракує базових знань та навичок в образотворчому мистецтві?</p>
             <p>
               Цей курс закладе міцний фундамент вашого творчого розвитку та сприятиме підвищенню вже наявних навичок.
@@ -31,10 +31,10 @@
               </div>
               <p class="courses-date-title">Курс триває. Ви можете приєднатися до групи зараз.</p>
             </div>
-            <button class="sign-up" type="button">ЗАПИСАТИСЯ</button>
+            <button class="sign-up" type="button" data-modal-open>ЗАПИСАТИСЯ</button>
           </div>
           <div class="courses-hero-img">
-            <img src="../../../images/courses/sculpture_480.png" alt="скульптура" width="720" height="720" />
+            <img src="../../../images/courses/sculpture_480.png" alt="скульптура" width="720" height="720" loading="lazy"/>
           </div>
         </div>
       </section>
@@ -178,8 +178,8 @@
           </ul>
         </div>
       </section>
-      <section class="reviews section">
-        <div class="container">
+      <section class="reviews-courses section">
+        <div class="revievs__container revievs__container-courses container">
           <h2>ВІДГУКИ</h2>
           <h3>реальні історії успіху</h3>
           <div class="slider">
@@ -197,72 +197,34 @@
           <div class="slider-window">
             <ul class="slider-track"></ul>
           </div>
-          <!-- ather -->
-          <!-- <h2>відгуки</h2>
-          <h3>реальні історії успіху</h3>
-          <button class="slider-left"></button>
-          <button class="slider-right"></button>
-          <ul>
-            <li>
-              <div class="reviews__head">
-                <img src="../../../images/reviews/user.png" alt="випускник" width="96" height="96" />
-                <p>October 15, 2024</p>
-                <h4>Рукавчук Лілія</h4>
-                <p>Курс Академічного рисунку</p>
-              </div>
-              <p>
-                Насправді перед записом на курс академічного рисунку, я вагалася, оскільки була далека від розуміння
-                основ. Курс потребував зусиль, але допомогли підтримка, зворотний зв'язок та подача інформації від
-                ментора, це було доступно навіть для початківців.
-              </p>
-              <p>БАЛ:</p>
-              <a href="https://www.instagram.com/">instagram</a>
-            </li>
-            <li>
-              <div class="reviews__head">
-                <img src="../../../images/reviews/shushman.png" alt="випускник" width="96" height="96" />
-                <p>July 14, 2025</p>
-                <h4>Шушман Дарина</h4>
-                <p>Курс Академічного рисунку</p>
-              </div>
-              <p>
-                Щодо курсу, то я дуже рада, що знайшла вас та вашу школу. Загуглила школу і захотілося спробувати
-                понавчатися у вас. Очікування справдилися, навіть трохи більше. Думала підтягнути знання з академічного
-                рисунку, воно так і вийшло, але ще дізналася багато нового та цікавого. Подобається структура занять та
-                пояснення матеріалу. Навички покращилися, з 144 балів за творчий конкурс, я набрала 186. Якби було
-                більше особистого часу на практику, впевнена вийшло б більше)! Класно, що ви знаєте які вимоги в
-                університетах, це дуже допомогло готуватися. Дякую!
-              </p>
-              <p>БАЛ: 186</p>
-              <a href="https://www.instagram.com/bibopuart">Instagram</a>
-            </li>
-          </ul> -->
         </div>
       </section>
       <section class="examples section">
-        <div class="container"></div>
-        <h2>Від навчання — до результату</h2>
-        <ul>
-          <li>
-            <img src="../../../images/courses/example-3-1020-572.png" alt="арт-приклад" width="1017" height="572" />
-          </li>
-          <li>
-            <img src="../../../images/courses/example-2-1020-572.png" alt="арт-приклад" width="1017" height="572" />
-          </li>
-          <li>
-            <img src="../../../images/courses/example-1020-572.png" alt="арт-приклад" width="1017" height="572" />
-          </li>
-        </ul>
+        <div class="container">
+          <h2>Від навчання — до результату</h2>
+          <ul>
+            <li>
+              <img src="../../../images/courses/example-3-1020-572.png" alt="арт-приклад" width="1017" height="572" loading="lazy"/>
+            </li>
+            <li>
+              <img src="../../../images/courses/example-2-1020-572.png" alt="арт-приклад" width="1017" height="572" loading="lazy"/>
+            </li>
+            <li>
+              <img src="../../../images/courses/example-1020-572.png" alt="арт-приклад" width="1017" height="572" loading="lazy"/>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
     <div class="telegram-bots">
       <a href="https://t.me/maryartosvita" target="_blank"
-        ><img src="../../../images/bcg/Ellipse 315.png" alt="бот" width="74" height="74"
+        ><img src="../../../images/bcg/Ellipse 315.png" alt="бот" width="74" height="74" loading="lazy"
       /></a>
       <a href="https://t.me/vstup_artosvita" target="_blank"
-        ><img src="../../../images/bcg/Frame 139.png" alt="бот" width="74" height="74"
+        ><img src="../../../images/bcg/Frame 139.png" alt="бот" width="74" height="74" loading="lazy"
       /></a>
     </div>
-    <script type="module" src="../../main.js"></script>
+
+    <script type="module" src="../../js/main.js"></script>
   </body>
 </html>

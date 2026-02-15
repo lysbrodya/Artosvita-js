@@ -102,12 +102,19 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
+  @media (max-width: 767px) {
+    gap: 6px;
+  }
 }
 .curriculum-moduls-item {
   background-color: $bcg-curriculum-btn;
   width: 100%;
   padding: 16px 32px;
   border-radius: 24px;
+  @media (max-width: 767px) {
+    padding: 12px;
+    border-radius: 16px;
+  }
 }
 .module-btn {
   background-color: transparent;
@@ -128,6 +135,10 @@
   height: 32px;
   border-radius: 50%;
   background-color: rgb(0, 0, 0);
+  @media (max-width: 767px) {
+    width: 23px;
+    height: 23px;
+  }
 }
 .icon-line {
   position: absolute;
@@ -137,6 +148,10 @@
   height: 2.5px;
   background: $bcg-curriculum-btn;
   transform: translate(-50%, -50%);
+  @media (max-width: 767px) {
+    width: 13px;
+    height: 1.5px;
+  }
 }
 
 .icon-line--h {
@@ -193,6 +208,11 @@
   font-weight: 500;
   color: rgb(20, 20, 20);
   display: flex;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    width: 100%;
+    padding-right: 12px;
+  }
   & p:first-child {
     display: flex;
     color: rgb(83, 85, 87);
@@ -201,10 +221,26 @@
     align-items: center;
     padding-right: 10px;
     border-right: 1px solid rgba(129, 135, 140, 0.66);
+    @media (max-width: 767px) {
+      font-size: 16px;
+      border-right: none;
+      border-bottom: 1px solid rgba(129, 135, 140, 0.66);
+      padding-bottom: 4px;
+      width: 100%;
+    }
   }
   & p:last-child {
     font-family: $main-font;
     padding-left: 10px;
     line-height: 1;
+    @media (max-width: 767px) {
+      padding-top: 4px;
+      font-size: 16px;
+      padding-left: 0;
+      align-self: start;
+    }
   }
+}
+.button-visible {
+  width: 100%;
 }
