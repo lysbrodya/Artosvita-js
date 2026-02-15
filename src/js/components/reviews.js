@@ -6,13 +6,13 @@ export async function loadReviews() {
   const res = await fetch(`${BASE_PATH}/reviews.json`);
   return res.json();
 }
-
+// ${item.image}
 export function renderReviews(list) {
   return list
     .map(
       (item) => `<li class="review-card">
       <div class="review-card__top">
-        <img class="review-card__avatar" src="${item.image}" width="96" height="96">
+        <img class="review-card__avatar" src="../../../public${item.image}" width="96" height="96">
         <div class="review-card__info">
           <p class="review-card__date">${item.date}</p>
           <h4 class="review-card__name">${item.name}</h4>

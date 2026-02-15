@@ -6,13 +6,10 @@ import { initScrollHeader } from "../js/features/scrollHeader.js";
 import { modal } from "./components/modal.js";
 
 initHeader();
-
 initSlider();
 initCurriculum();
 initScrollHeader();
-// document.addEventListener("DOMContentLoaded", () => {
-//   modal();
-// });
+
 document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
 });
