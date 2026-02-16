@@ -1057,6 +1057,7 @@ button,
   .modal {
     width: 460px;
     padding: 96px 64px 0 64px;
+    border-radius: 64px 0 0 64px;
   }
 }
 
