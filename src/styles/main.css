@@ -1075,22 +1075,21 @@ button,
   right: 14px;
   overflow: hidden;
   box-sizing: border-box;
+  transition: transform 0.5s ease-in-out;
 }
 
 .modal-icon {
   display: block;
-  transition: scale 0.5s ease-in-out;
   color: black;
   box-sizing: border-box;
   width: 18px;
   height: 18px;
 }
 
-.modal-btn:hover > .modal-icon {
+.modal-btn:hover {
   overflow: hidden;
-  scale: 1.4;
+  transform: scale(1.2);
   cursor: pointer;
-  fill: blue;
 }
 
 .modal-menu.is-hidden {
