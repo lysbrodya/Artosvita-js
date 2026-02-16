@@ -51,7 +51,7 @@
 </div>
 `;function E(){document.body.insertAdjacentHTML("beforeend",x);const e=document.querySelector(".backdrop"),t=document.querySelector(".mob-menu"),n=document.querySelector(".mobile-menu-close-button");if(!e||!t||!n)return;t.addEventListener("click",o),n.addEventListener("click",o),e.addEventListener("click",s=>{s.target===e&&o()});function o(){e.classList.toggle("is-hidden"),document.body.classList.toggle("no-scroll")}}const f=location.hostname.includes("github.io")?"/Artosvita-js":"";async function S(){return(await fetch(`${f}/reviews.json`)).json()}function $(e){return e.map(t=>`<li class="review-card">
       <div class="review-card__top">
-        <img class="review-card__avatar" src="../../../public${t.image}" width="96" height="96">
+        <img class="review-card__avatar" src="${t.image}" width="96" height="96">
         <div class="review-card__info">
           <p class="review-card__date">${t.date}</p>
           <h4 class="review-card__name">${t.name}</h4>
