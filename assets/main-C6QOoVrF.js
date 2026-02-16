@@ -37,13 +37,13 @@
     <nav class="mobile__nav">
       <ul class="mobile__nav__list">
         <li class="mobile__nav__item">
-          <a class="mobile__nav__link active" href="/src/pages/courses/courses.html">КУРСИ</a>
+          <a class="mobile__nav__link active" href="src/pages/courses/courses.html">КУРСИ</a>
         </li>
         <li class="mobile__nav__item">
-          <a class="mobile__nav__link" href="/src/pages/blog/blog.html">БЛОГ</a>
+          <a class="mobile__nav__link" href="src/pages/blog/blog.html">БЛОГ</a>
         </li>
         <li class="mobile__nav__item">
-          <a class="mobile__nav__link" href="/src/pages/about.html">ПРО ПРОЕКТ</a>
+          <a class="mobile__nav__link" href="src/pages/about.html">ПРО ПРОЕКТ</a>
         </li>
       </ul>
     </nav>
