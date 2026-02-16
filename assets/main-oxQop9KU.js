@@ -30,7 +30,7 @@
   <div class="mobile-menu">
     <button type="button" class="mobile-menu-close-button">
       <svg class="menu-close" width="18" height="18">
-        <use href="/svg/icon-close.svg"></use>
+        <use href="./svg/icon-close.svg"></use>
       </svg>
     </button>
 
@@ -77,7 +77,7 @@
       <div class="modal">
         <button class="modal-btn" data-modal-close type="button">
           <svg class="modal-icon" width="18" height="18">
-            <use href="/svg/icon-close.svg"></use>
+            <use href="./svg/icon-close.svg"></use>
           </svg>
         </button>
         <p class="form-title">ЗАПИС НА КУРС</p>
