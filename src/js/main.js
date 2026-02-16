@@ -1,3 +1,8 @@
+// import bcgHero from "../public/images/bcg/bcg_hero.png";
+// import bcgAdvantages from "../public/images/bcg/bcg_advantages.png";
+// document.documentElement.style.setProperty("--bcg-hero", url("${bcgHero}"));
+// document.documentElement.style.setProperty("--bcg-advantages", url("${bcgAdvantages}"));
+
 import { initHeader } from "../js/components/header.js";
 import { initMobileMenu } from "../js/components/mobileMenu.js";
 import { initSlider } from "../js/components/slider.js";

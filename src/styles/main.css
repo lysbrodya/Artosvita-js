@@ -139,10 +139,10 @@ button,
   background-attachment: fixed;
 }
 .section.hero {
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../public/images/bcg/bcg_hero.png");
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/bcg/bcg_hero.png");
 }
 .section.advantages {
-  background-image: url("../../../public/images/bcg/bcg_advantages.png");
+  background-image: url("/images/bcg/bcg_advantages.png");
 }
 
 .header {
@@ -157,7 +157,7 @@ button,
 }
 
 .header-main {
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../public/images/bcg/bcg_hero.png");
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/bcg/bcg_hero.png");
 }
 
 .logo {
